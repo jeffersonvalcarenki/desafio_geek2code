@@ -5,8 +5,8 @@ print('Informe n de 1 a 1000...')
 n = int(input())
 if n in range(1, 1000):
 
-    def imprimirLinha(linha):
-        def adicionarEspacos(quantidade):
+    def imprimir_linha(linha):
+        def adicionar_espacos(quantidade):
             string = ''
             for _ in range(0, quantidade):
                 string += ESPACO
@@ -14,20 +14,20 @@ if n in range(1, 1000):
 
         if linha == 0:
             string = ''
-            string += adicionarEspacos(n)
+            string += adicionar_espacos(n)
             string += CARACTERE
             return string
         else:
             string = ''
-            string += adicionarEspacos(n-linha)
+            string += adicionar_espacos(n-linha)
             string += CARACTERE
-            string += adicionarEspacos((linha*2)-1)
+            string += adicionar_espacos((linha*2)-1)
             string += CARACTERE
             return string
 
     for linha in range(0, n-1):
-        print(imprimirLinha(linha))
+        print(imprimir_linha(linha))
 
     for linha in range(n-1, -1, -1):
-        print(imprimirLinha(linha))
+        print(imprimir_linha(linha))
     
